@@ -4,7 +4,7 @@ import { ConfettiOutline } from "../icons/conffeti";
 
 export function HeaderPro() {
   return (
-    <div className="sticky top-0 z-[100] w-full bg-[#FF2D55]">
+    <div className="sticky top-0 z-[100] w-full bg-[#50C878]">
       <div className="w-full px-4 py-2.5">
         <Link
           className="group flex items-center justify-center gap-2.5 tracking-tighter transition-all duration-300 md:gap-3"

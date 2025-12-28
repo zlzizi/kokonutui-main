@@ -9,7 +9,6 @@ import SlideTextButton from "@/components/kokonutui/slide-text-button";
 import { ArrowRightBroken } from "../icons/arrow-right-broken";
 import CardFlip from "../kokonutui/card-flip";
 import FileUpload from "../kokonutui/file-upload";
-import NotificationCenter from "../kokonutui/liquid-glass-card";
 
 export function HeroSection() {
   return (
@@ -143,7 +142,7 @@ export function HeroSection() {
 
         <motion.div
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          className="-mt-4 relative grid w-full grid-cols-1 gap-6 md:mt-0 md:grid-cols-2"
+          className="-mt-4 relative grid w-full grid-cols-1 gap-6 md:mt-0"
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
@@ -161,21 +160,6 @@ export function HeroSection() {
             <div className="flex w-full flex-col items-center justify-center gap-3">
               <AILoadingState />
             </div>
-          </motion.div>
-
-          {/* Right side - Input */}
-          <motion.div
-            className="w-full"
-            initial={{ rotate: 4, x: 10 }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 25,
-            }}
-            whileHover={{ rotate: 0, x: 0, scale: 1.02 }}
-          >
-            {/* <AppleActivityCard /> */}
-            <NotificationCenter />
           </motion.div>
         </motion.div>
       </div>

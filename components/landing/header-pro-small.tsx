@@ -4,7 +4,7 @@ import { ConfettiOutline } from "../icons/conffeti";
 
 export default function HeaderProSmall() {
     return (
-        <div className="w-full bg-[#FF2D55] rounded-md">
+        <div className="w-full bg-[#50C878] rounded-md">
             <div className="w-full px-4 py-1.5">
                 <Link
                     href="https://kokonutui.pro?utm_source=kokonutui.com&utm_medium=header"

@@ -22,10 +22,10 @@ export interface CardFlipProps {
 }
 
 export default function CardFlip({
-  title = "Design Systems",
+  title = "High Quality Designs",
   subtitle = "Explore the fundamentals",
   description = "Dive deep into the world of modern UI/UX design.",
-  features = ["UI/UX", "Modern Design", "Tailwind CSS", "Kokonut UI"],
+  features = ["Safe Materials", "Modern Design", "Long lasting & Durable", "Warranty Included"],
 }: CardFlipProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -164,7 +164,7 @@ export default function CardFlip({
               )}
             >
               <span className="font-medium text-sm text-zinc-900 transition-colors duration-300 group-hover/start:text-orange-600 dark:text-white dark:group-hover/start:text-orange-400">
-                Start today
+                Explore Products
               </span>
               <div className="group/icon relative">
                 <div

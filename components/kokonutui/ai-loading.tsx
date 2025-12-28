@@ -10,44 +10,16 @@
  * @github: https://github.com/kokonut-labs/kokonutui
  */
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const TASK_SEQUENCES = [
     {
-        status: "Searching the web",
+        status: "Proccessing order",
         lines: [
-            "Initializing web search...",
-            "Scanning web pages...",
-            "Visiting 5 websites...",
-            "Analyzing content...",
-            "Generating summary...",
-        ],
-    },
-    {
-        status: "Analyzing results",
-        lines: [
-            "Analyzing search results...",
-            "Generating summary...",
-            "Checking for relevant information...",
-            "Finalizing analysis...",
-            "Setting up lazy loading...",
-            "Configuring caching strategies...",
-            "Running performance tests...",
-            "Finalizing optimizations...",
-        ],
-    },
-    {
-        status: "Enhancing UI/UX",
-        lines: [
-            "Initializing UI enhancement scan...",
-            "Checking accessibility compliance...",
-            "Analyzing component animations...",
-            "Reviewing loading states...",
-            "Testing responsive layouts...",
-            "Optimizing user interactions...",
-            "Validating color contrast...",
-            "Checking motion preferences...",
-            "Finalizing UI improvements...",
+            "Proccessing order...",
+            "ending your package...",
+            "Its on the way...",
+            "Order Delivered...",
         ],
     },
 ];
@@ -156,87 +128,39 @@ const LoadingAnimation = ({ progress }: { progress: number }) => (
 );
 
 export default function AILoadingState() {
-    const [sequenceIndex, setSequenceIndex] = useState(0);
-    const [visibleLines, setVisibleLines] = useState<
-        Array<{ text: string; number: number }>
-    >([]);
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const codeContainerRef = useRef<HTMLDivElement>(null);
-    const lineHeight = 28;
-
-    const currentSequence = TASK_SEQUENCES[sequenceIndex];
+    const currentSequence = TASK_SEQUENCES[0];
     const totalLines = currentSequence.lines.length;
+    const lineHeight = 28;
+    const visibleLinesCount = 3;
+    const maxScroll = Math.max(0, (totalLines - visibleLinesCount) * lineHeight);
+    const codeContainerRef = useRef<HTMLDivElement>(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
-    useEffect(() => {
-        const initialLines = [];
-        for (let i = 0; i < Math.min(5, totalLines); i++) {
-            initialLines.push({
-                text: currentSequence.lines[i],
-                number: i + 1,
-            });
-        }
-        setVisibleLines(initialLines);
-        setScrollPosition(0);
-    }, [sequenceIndex, currentSequence.lines, totalLines]);
-
-    // Handle line advancement
     useEffect(() => {
         const advanceTimer = setInterval(() => {
-            // Get the current first visible line index
-            const firstVisibleLineIndex = Math.floor(
-                scrollPosition / lineHeight
-            );
-            const nextLineIndex = (firstVisibleLineIndex + 3) % totalLines;
-
-            // If we're about to wrap around, move to next sequence
-            if (nextLineIndex < firstVisibleLineIndex && nextLineIndex !== 0) {
-                setSequenceIndex(
-                    (prevIndex) => (prevIndex + 1) % TASK_SEQUENCES.length
-                );
-                return;
-            }
-
-            // Add the next line if needed
-            if (
-                nextLineIndex >= visibleLines.length &&
-                nextLineIndex < totalLines
-            ) {
-                setVisibleLines((prevLines) => [
-                    ...prevLines,
-                    {
-                        text: currentSequence.lines[nextLineIndex],
-                        number: nextLineIndex + 1,
-                    },
-                ]);
-            }
-
-            // Scroll to the next line
-            setScrollPosition((prevPosition) => prevPosition + lineHeight);
-        }, 2000); // Slightly slower than the example for better readability
+            setScrollPosition((prev) => (prev >= maxScroll ? 0 : prev + lineHeight));
+        }, 2000);
 
         return () => clearInterval(advanceTimer);
-    }, [
-        scrollPosition,
-        visibleLines,
-        totalLines,
-        sequenceIndex,
-        currentSequence.lines,
-        lineHeight,
-    ]);
+    }, [lineHeight, maxScroll]);
 
-    // Apply scroll position
     useEffect(() => {
         if (codeContainerRef.current) {
             codeContainerRef.current.scrollTop = scrollPosition;
         }
     }, [scrollPosition]);
 
+    const visibleLines = currentSequence.lines.map((text, index) => ({
+        text,
+        number: index + 1,
+    }));
+
     return (
         <div className="flex items-center justify-center min-h-full w-full">
             <div className="space-y-4 w-auto">
                 <div className="ml-2 flex items-center space-x-2 text-gray-600 dark:text-gray-300 font-medium">
                     <LoadingAnimation
-                        progress={(sequenceIndex / TASK_SEQUENCES.length) * 100}
+                        progress={100}
                     />
                     <span className="text-sm">{currentSequence.status}...</span>
                 </div>
