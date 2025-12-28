@@ -6,8 +6,8 @@ import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Kokonut UI - Open Source Components",
-    default: "Kokonut UI - Open Source Components",
+    template: "%s | Celzi - Open Source Components",
+    default: "Celzi - Open Source Components",
   },
 };
 

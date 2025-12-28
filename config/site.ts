@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "KokonutUI",
+  name: "Celzi",
   url: "https://kokonutui.com",
   ogImage: "https://kokonutui.com/og.jpg",
   description:

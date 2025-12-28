@@ -9,7 +9,7 @@ export function Footer() {
       {/* Big Background Text */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
         <span className="select-none whitespace-nowrap font-black text-[25vw] text-black/4 leading-none tracking-tighter md:text-[20vw] lg:text-[18vw] xl:text-[15vw] dark:text-white/4">
-          Kokonut UI
+          Celzi
         </span>
       </div>
       <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
@@ -21,7 +21,7 @@ export function Footer() {
                 <span className="inline-flex items-center font-bold tracking-tight">
                   <Image alt="logo" height={28} src="/logo.svg" width={28} />
 
-                  <span className="ml-1 sm:ml-0">Kokonut UI</span>
+                  <span className="ml-1 sm:ml-0">Celzi</span>
                 </span>
               </div>
             </Link>
@@ -73,7 +73,7 @@ export function Footer() {
                   href="https://kokonutui.pro?utm_source=kokonutui.com&utm_medium=footer"
                   target="_blank"
                 >
-                  Kokonut UI - Pro
+                  Celzi Pro
                 </Link>
               </li>
               <li>

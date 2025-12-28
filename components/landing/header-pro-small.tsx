@@ -16,8 +16,8 @@ export default function HeaderProSmall() {
                         <ConfettiOutline className="w-5 h-5 text-white" />
                         <span className="text-white tracking-tighter text-sm">
                             Introducing{" "}
-                            <span className="font-bold">Kokonut UI Pro</span> -
-                            70+ new components and templates to build beautiful
+                            <span className="font-bold">Celzi Pro</span> - 70+
+                            new components and templates to build beautiful
                             websites
                         </span>
                         <span className="inline-flex items-center gap-1.5">
@@ -29,7 +29,7 @@ export default function HeaderProSmall() {
                     <span className="flex md:hidden items-center gap-2.5">
                         <PartyPopper className="w-5 h-5 text-white flex-shrink-0" />
                         <span className="text-white font-medium tracking-tight text-xs leading-tight">
-                            Introducing Kokonut UI Pro - 70+ new components and
+                            Introducing Celzi Pro - 70+ new components and
                             templates to build beautiful websites
                         </span>
                         <ArrowUpRight className="w-3.5 h-3.5 text-white flex-shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

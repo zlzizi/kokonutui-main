@@ -33,7 +33,7 @@ export async function Header() {
                 <Link className="flex items-center gap-2" href="/">
                   <Image alt="logo" height={28} src="/logo.svg" width={28} />
                   <span className="hidden font-semibold text-lg sm:block">
-                    Kokonut UI
+                    Celzi
                   </span>
                 </Link>
                 <span className="text-zinc-300 dark:text-zinc-700">|</span>
@@ -51,12 +51,6 @@ export async function Header() {
                   >
                     Templates
                   </Link>
-                  <ViewTransitionsLink
-                    className="flex items-center gap-1 rounded-lg px-3 py-1 font-medium text-[15px] text-black/80 tracking-tighter transition-all duration-200 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5"
-                    href="/#testimonials"
-                  >
-                    Testimonials
-                  </ViewTransitionsLink>
                 </div>
               </div>
 

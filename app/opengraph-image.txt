@@ -1,2 +1,2 @@
-KokonutUI
+Celzi
 A collection of modern, interactive, customizable UI components built with Shadcn & Tailwind CSS. Ready to make your next project faster and beautiful.
