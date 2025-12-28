@@ -60,12 +60,6 @@ export function HeroSection() {
         <div className="flex w-full flex-col justify-center sm:justify-start">
           <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:items-start sm:justify-start">
             <SlideTextButton hoverText="Click to see more" />
-            <SlideTextButton
-              hoverText="Click to see more"
-              href="https://kokonutui.pro/templates"
-              text="View Templates"
-              variant="ghost"
-            />
           </div>
         </div>
         <div className="mt-8 w-full space-y-2">

@@ -17,36 +17,12 @@ type CartItem = Product & {
 
 const products: Product[] = [
   {
-    id: "celzi-aurora",
-    name: "Celzi Aurora Keycap Set",
-    description: "PBT caps with a soft gradient and crisp legends.",
+    id: "skull-keycaps",
+    name: "Skull Keycaps",
+    description: "Skull keycap with transparent center.",
     price: 89,
-    image: "/images/keycap-aurora.jpg",
-    finish: "PBT, Cherry Profile",
-  },
-  {
-    id: "celzi-slate",
-    name: "Celzi Slate Keycap Set",
-    description: "Muted graphite tones with a matte texture.",
-    price: 74,
-    image: "/images/keycap-slate.jpg",
-    finish: "PBT, OEM Profile",
-  },
-  {
-    id: "celzi-flare",
-    name: "Celzi Flare Keycap Set",
-    description: "Warm accents for a high-contrast desk setup.",
-    price: 96,
-    image: "/images/keycap-flare.jpg",
-    finish: "ABS, Cherry Profile",
-  },
-  {
-    id: "celzi-ice",
-    name: "Celzi Ice Keycap Set",
-    description: "Cool tones with a subtle glow-ready finish.",
-    price: 92,
-    image: "/images/keycap-ice.jpg",
-    finish: "PBT, XDA Profile",
+    image: "/images/skull.jpg",
+    finish: "Fits most mechanical keyboards",
   },
 ];
 

@@ -1,38 +1,53 @@
-import { ArrowUpRight, PartyPopper } from "lucide-react";
+"use client";
+
+import { PartyPopper, X } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { ConfettiOutline } from "../icons/conffeti";
 
 export function HeaderPro() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <div className="sticky top-0 z-[100] w-full bg-[#50C878]">
       <div className="w-full px-4 py-2.5">
-        <Link
-          className="group flex items-center justify-center gap-2.5 tracking-tighter transition-all duration-300 md:gap-3"
-          href="https://kokonutui.pro?utm_source=kokonutui.com&utm_medium=header"
-          target="_blank"
-        >
-          {/* Desktop View */}
-          <span className="hidden items-center gap-3 md:flex">
-            <ConfettiOutline className="h-5 w-5 text-white" />
-            <span className="text-md text-white tracking-tighter">
-              Introducing <span className="font-bold">Celzi Pro</span> -
-              70+ new components and templates to build beautiful websites
+        <div className="flex items-center gap-3">
+          <Link
+            className="group flex flex-1 items-center justify-center gap-2.5 tracking-tighter transition-all duration-300 md:gap-3"
+            href="https://kokonutui.pro?utm_source=kokonutui.com&utm_medium=header"
+            target="_blank"
+          >
+            {/* Desktop View */}
+            <span className="hidden items-center gap-3 md:flex">
+              <ConfettiOutline className="h-5 w-5 text-white" />
+              <span className="text-md text-white tracking-tighter">
+                Introducing <span className="font-bold">Celzi Pro</span> - 70+
+                new components and templates to build beautiful websites
+              </span>
             </span>
-            <span className="inline-flex items-center gap-1.5">
-              <ArrowUpRight className="group-hover:-translate-y-0.5 h-3.5 w-3.5 text-white transition-transform group-hover:translate-x-0.5" />
-            </span>
-          </span>
 
-          {/* Mobile View */}
-          <span className="flex items-center gap-2.5 md:hidden">
-            <PartyPopper className="h-5 w-5 flex-shrink-0 text-white" />
-            <span className="font-medium text-white text-xs leading-tight tracking-tight">
-              Introducing Celzi Pro - 70+ new components and templates to build
-              beautiful websites
+            {/* Mobile View */}
+            <span className="flex items-center gap-2.5 md:hidden">
+              <PartyPopper className="h-5 w-5 flex-shrink-0 text-white" />
+              <span className="font-medium text-white text-xs leading-tight tracking-tight">
+                Introducing Celzi Pro - 70+ new components and templates to
+                build beautiful websites
+              </span>
             </span>
-            <ArrowUpRight className="group-hover:-translate-y-0.5 h-3.5 w-3.5 flex-shrink-0 text-white transition-transform group-hover:translate-x-0.5" />
-          </span>
-        </Link>
+          </Link>
+          <button
+            aria-label="Close banner"
+            className="flex h-8 w-8 items-center justify-center rounded-full text-white/90 transition hover:bg-white/10"
+            onClick={() => setIsVisible(false)}
+            type="button"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
       </div>
     </div>
   );

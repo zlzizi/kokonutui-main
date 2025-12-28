@@ -40,17 +40,10 @@ export async function Header() {
                 <div className="hidden items-center gap-0.5 sm:flex">
                   <ViewTransitionsLink
                     className="flex items-center gap-1 rounded-lg px-3 py-1 font-medium text-[15px] text-black/80 tracking-tighter transition-all duration-200 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5"
-                    href="/docs/components/action-search-bar"
+                    href="/#products"
                   >
-                    Components
+                    Products
                   </ViewTransitionsLink>
-                  <Link
-                    className="flex items-center gap-1 rounded-lg px-3 py-1 font-medium text-[15px] text-black/80 tracking-tighter transition-all duration-200 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5"
-                    href="https://kokonutui.pro/templates?utm_source=kokonutui.com&utm_medium=header"
-                    target="_blank"
-                  >
-                    Templates
-                  </Link>
                 </div>
               </div>
 
@@ -95,16 +88,9 @@ export async function Header() {
               <div className="flex items-center gap-4 sm:hidden">
                 <ViewTransitionsLink
                   className="rounded-md border border-transparent px-3 py-1.5 text-sm text-zinc-600 transition-all hover:border-zinc-200 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:border-zinc-800 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
-                  href="/docs/components/action-search-bar"
+                  href="/#products"
                 >
-                  Components
-                </ViewTransitionsLink>
-                <ViewTransitionsLink
-                  className="rounded-md border border-transparent px-3 py-1.5 text-sm text-zinc-600 transition-all hover:border-zinc-200 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:border-zinc-800 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
-                  href="https://kokonutui.pro/templates?utm_source=kokonutui.com&utm_medium=header"
-                  target="_blank"
-                >
-                  Templates
+                  Products
                 </ViewTransitionsLink>
                 <ThemeToggle />
               </div>
